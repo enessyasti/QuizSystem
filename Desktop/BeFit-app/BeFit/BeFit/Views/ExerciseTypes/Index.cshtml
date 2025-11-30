@@ -1,0 +1,48 @@
+@model IEnumerable<BeFit.Models.ExerciseType>
+
+@{
+    ViewData["Title"] = "Exercise Types";
+}
+
+<h1>Exercise Types</h1>
+<p class="hero-subtitle">Categories are now more diverse: Yoga, Pilates, Boxing, Swimming, Cycling, Running, CrossFit, Powerlifting, Rowing, and Basketball have been added.</p>
+
+<p>
+    @if (User.IsInRole("Admin")) {
+        <a asp-action="Create" class="btn btn-primary">Create New</a>
+    }
+</p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @if (User.IsInRole("Admin")) {
+                    <div class="btn-group btn-group-sm" role="group">
+                        <a class="btn btn-link p-0" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                        <span class="px-1 text-muted">|</span>
+                        <a class="btn btn-link p-0" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                        <span class="px-1 text-muted">|</span>
+                        <a class="btn btn-link p-0" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </div>
+                } else {
+                    <div class="btn-group btn-group-sm" role="group">
+                        <a class="btn btn-link p-0" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    </div>
+                }
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

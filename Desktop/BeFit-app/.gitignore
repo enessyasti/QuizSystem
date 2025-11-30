@@ -1,0 +1,48 @@
+## Ignore Visual Studio temporary files, build results, and
+## User-specific files
+# Build folders
+bin/
+obj/
+
+# Visual Studio / Rider
+.vs/
+.idea/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Mono
+*.pidb
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# NuGet
+.nuget/
+packages/
+*.nupkg
+
+# Logs
+*.log
+
+# ASP.NET runtime
+*.db
+
+# Node
+node_modules/
+
+# npm
+package-lock.json
+
+# Rider
+/.idea/
+
+# Visual Studio Code
+.vscode/
+
+# Publish output
+*/publish/

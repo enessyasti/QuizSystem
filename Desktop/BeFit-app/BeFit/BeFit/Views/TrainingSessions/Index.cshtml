@@ -1,0 +1,42 @@
+@model IEnumerable<BeFit.Models.TrainingSession>
+
+@{
+    ViewData["Title"] = "Training Sessions";
+}
+
+<h1 class="mb-3">Training Sessions</h1>
+<p class="lead hero-subtitle mb-4">View your planned and completed training sessions here. Timestamps are shown in the new format.</p>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create New</a>
+</p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.StartTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EndTime)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @item.StartTime.ToString("dd.MM.yyyy HH:mm")
+            </td>
+            <td>
+                @item.EndTime.ToString("dd.MM.yyyy HH:mm")
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

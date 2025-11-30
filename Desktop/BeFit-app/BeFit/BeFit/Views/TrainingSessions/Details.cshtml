@@ -1,0 +1,31 @@
+@model BeFit.Models.TrainingSession
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 class="mb-3">Details</h1>
+<p class="hero-subtitle mb-4">Session time information is displayed using the new date format.</p>
+
+<div>
+    <h4>Training Session</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StartTime)
+        </dt>
+        <dd class = "col-sm-10">
+            @Model.StartTime.ToString("dddd, dd MMMM yyyy HH:mm")
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EndTime)
+        </dt>
+        <dd class = "col-sm-10">
+            @Model.EndTime.ToString("dddd, dd MMMM yyyy HH:mm")
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary">Edit</a> |
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</div>
