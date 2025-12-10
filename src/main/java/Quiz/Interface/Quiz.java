@@ -3,6 +3,6 @@ package Quiz.Interface;
 import java.util.List;
 
 public interface Quiz {
-    String getTitle();
-    List<Question> getQuestions();
+    String getTitle();                    // Quiz başlığı
+    List<? extends Question> getQuestions(); // Soru listesi
 }

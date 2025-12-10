@@ -3,9 +3,8 @@ package Quiz.impl;
 import Quiz.Interface.Answer;
 
 public class BasicAnswer implements Answer {
-
-    private final String content;
-    private final boolean correct;
+    private final String content;   // Cevap metni
+    private final boolean correct;  // Doğru mu?
 
     public BasicAnswer(String content, boolean correct) {
         this.content = content;
@@ -13,12 +12,8 @@ public class BasicAnswer implements Answer {
     }
 
     @Override
-    public String getContent() {
-        return content;
-    }
+    public String getContent() { return content; }    // içeriği döndür
 
     @Override
-    public boolean isCorrect() {
-        return correct;
-    }
+    public boolean isCorrect() { return correct; }    // doğru mu diye sor
 }
