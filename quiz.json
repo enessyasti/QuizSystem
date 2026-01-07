@@ -1,0 +1,40 @@
+{
+  "title" : "Java Quiz",
+  "questions" : [ {
+    "text" : "What is Java?",
+    "answers" : [ {
+      "text" : "Programming Language",
+      "correct" : true
+    }, {
+      "text" : "Operating System",
+      "correct" : false
+    }, {
+      "text" : "Database",
+      "correct" : false
+    } ]
+  }, {
+    "text" : "Which keyword is used to create an object in Java?",
+    "answers" : [ {
+      "text" : "new",
+      "correct" : true
+    }, {
+      "text" : "class",
+      "correct" : false
+    }, {
+      "text" : "void",
+      "correct" : false
+    } ]
+  }, {
+    "text" : "Which collection does not allow duplicate values?",
+    "answers" : [ {
+      "text" : "List",
+      "correct" : false
+    }, {
+      "text" : "Set",
+      "correct" : true
+    }, {
+      "text" : "ArrayList",
+      "correct" : false
+    } ]
+  } ]
+}
